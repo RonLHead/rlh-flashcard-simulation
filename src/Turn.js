@@ -17,6 +17,12 @@ class Turn {
       return true;
     } else return false;
   }
+
+  giveFeedback() {
+    if(!this.evaluateGuess()) {
+      return 'incorrect!';
+    } else return 'correct!';
+  }
 }
 
 module.exports = Turn;
@@ -24,7 +30,6 @@ module.exports = Turn;
 /*
 Your Turn class should meet the following requirements:
 
-evaluateGuess: method that returns a boolean indicating if the user’s guess matches the
-correct answer on the card
+
 giveFeedback - method that returns either ‘incorrect!’ or ‘correct!’ based on whether the
 guess is correct or not.*/
