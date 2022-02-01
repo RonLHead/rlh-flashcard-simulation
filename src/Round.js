@@ -10,8 +10,11 @@ class Round {
     return this.currentCard;
   }
 
-  takeTurn() {
+  takeTurn(guess) {
     this.turns += 1;
+    if(guess === this.currentCard.correctAnswer) {
+      return 'correct!';
+    } else return 'incorrect!'
   }
 }
 
