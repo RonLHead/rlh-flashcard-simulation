@@ -7,6 +7,10 @@ class Turn {
   returnGuess() {
     return this.guess;
   }
+
+  returnCard() {
+    return this.card;
+  }
 }
 
 module.exports = Turn;
@@ -14,7 +18,6 @@ module.exports = Turn;
 /*
 Your Turn class should meet the following requirements:
 
-returnGuess: method that returns the guess
 returnCard: method that returns the Card
 evaluateGuess: method that returns a boolean indicating if the user’s guess matches the
 correct answer on the card
