@@ -11,8 +11,14 @@ describe('Turn', function() {
     expect(Turn).to.be.a('function');
   });
 
-  it('should an instance of Turn', function() {
+  it('should be an instance of Turn', function() {
     const turn = new Turn();
     expect(turn).to.be.an.instanceof(Turn);
+  });
+
+  it('should take a user\s guess to the question', function() {
+    const card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
+    const turn = new Turn('object', card);
+    expect(turn.guess).to.equal('object');
   });
 });
