@@ -14,12 +14,20 @@ class Round {
   takeTurn(guess) {
     this.turns += 1;
     if(guess === this.currentCard.correctAnswer) {
-      this.deck.cards.shift();
+      this.deck.cards.push(this.deck.cards.shift());
+      this.returnCurrentCard();
       return 'correct!';
     } else {
-      this.deck.cards.shift();
+      this.incorrectGuesses.push(this.currentCard.id)
+      this.deck.cards.push(this.deck.cards.shift());
+      this.returnCurrentCard();
       return 'incorrect!'
     }
+  }
+
+  calculatePercentCorrect() {
+    let numCorrect = this.deck.cards.length - this.incorrectGuesses.length;
+    return numCorrect/this.deck.cards.length
   }
 }
 
