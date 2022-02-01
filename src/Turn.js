@@ -26,10 +26,3 @@ class Turn {
 }
 
 module.exports = Turn;
-
-/*
-Your Turn class should meet the following requirements:
-
-
-giveFeedback - method that returns either ‘incorrect!’ or ‘correct!’ based on whether the
-guess is correct or not.*/
