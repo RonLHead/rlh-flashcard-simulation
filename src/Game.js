@@ -4,7 +4,7 @@ const util = require('./util');
 
 const Deck = require('./Deck');
 const Card = require('./Card');
-const Turn = require('./Turn');
+// const Turn = require('./Turn');
 const Round = require('./Round');
 
 class Game {
@@ -22,12 +22,11 @@ class Game {
   }
 
   start() {
-    const gameCards = Object.setPrototypeOf(prototypeQuestions, Card.prototype);
-    // console.log(gameCards)
+    const gameCards = prototypeQuestions.map(cardDetails => {
+      return new Card(cardDetails.id, cardDetails.question, cardDetails.answers, cardDetails.correctAnswer);
+    });
     const gameDeck = new Deck(gameCards)
-    // console.log(gameDeck)
     const gameRound = new Round(gameDeck);
-    // console.log(gameRound)
     this.printMessage(gameDeck, gameRound);
     this.printQuestion(gameRound)
   }
