@@ -11,15 +11,19 @@ class Round {
     return this.currentCard;
   }
 
+  nextCard() {
+    this.deck.cards.push(this.deck.cards.shift());
+  }
+
   takeTurn(guess) {
     this.turns += 1;
     if(guess === this.currentCard.correctAnswer) {
-      this.deck.cards.push(this.deck.cards.shift());
+      this.nextCard();
       this.returnCurrentCard();
       return 'correct!';
     } else {
       this.incorrectGuesses.push(this.currentCard.id)
-      this.deck.cards.push(this.deck.cards.shift());
+      this.nextCard();
       this.returnCurrentCard();
       return 'incorrect!'
     }
