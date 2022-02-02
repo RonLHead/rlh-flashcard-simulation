@@ -29,6 +29,12 @@ class Round {
     let numCorrect = this.deck.cards.length - this.incorrectGuesses.length;
     return Math.trunc((numCorrect/this.deck.cards.length) * 100);
   }
+
+  endRound() {
+    if(this.turns === this.deck.cards.length) {
+      return `** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`;
+    }
+  }
 }
 
 module.exports = Round;
