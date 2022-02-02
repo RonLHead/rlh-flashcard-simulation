@@ -131,6 +131,6 @@ describe('Round', function() {
     round.takeTurn('sea otter');
     round.takeTurn('gallbladder');
     round.takeTurn('watching Netflix');
-    expect(round.calculatePercentCorrect()).to.deep.equal(2/3)
+    expect(round.calculatePercentCorrect()).to.deep.equal(66);
   });
 });

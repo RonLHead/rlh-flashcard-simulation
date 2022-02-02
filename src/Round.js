@@ -27,7 +27,7 @@ class Round {
 
   calculatePercentCorrect() {
     let numCorrect = this.deck.cards.length - this.incorrectGuesses.length;
-    return numCorrect/this.deck.cards.length
+    return Math.trunc((numCorrect/this.deck.cards.length) * 100);
   }
 }
 
