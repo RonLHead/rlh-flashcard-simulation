@@ -7,23 +7,23 @@ class Round {
   }
 
   returnCurrentCard() {
-    this.currentCard = this.deck.cards[0];
+    this.currentCard = this.deck.cards[this.turns];
     return this.currentCard;
   }
 
   nextCard() {
-    this.deck.cards.push(this.deck.cards.shift());
+    // this.deck.cards.push(this.deck.cards.shift());
   }
 
   takeTurn(guess) {
-    this.turns += 1;
+    this.turns ++;
     if(guess === this.currentCard.correctAnswer) {
-      this.nextCard();
+      // this.nextCard();
       this.returnCurrentCard();
       return 'correct!';
     } else {
       this.incorrectGuesses.push(this.currentCard.id)
-      this.nextCard();
+      // this.nextCard();
       this.returnCurrentCard();
       return 'incorrect!'
     }
