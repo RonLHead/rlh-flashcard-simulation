@@ -2,6 +2,11 @@ const data = require('./data');
 const prototypeQuestions = data.prototypeData;
 const util = require('./util');
 
+const Deck = require('./Deck');
+const Card = require('./Card');
+const Turn = require('./Turn');
+const Round = require('./Round');
+
 class Game {
   constructor() {
     this.currentRound = '';
@@ -17,7 +22,10 @@ class Game {
   }
 
   start() {
-    const gameCards = new Card()
+    const gameCards = Object.setPrototypeOf(prototypeQuestions, Card.prototype);
+    // console.log(gameCards)
+    const gameDeck = new Deck(gameCards)
+    console.log(gameDeck)
   }
 }
 

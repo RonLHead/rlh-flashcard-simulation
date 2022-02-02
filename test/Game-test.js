@@ -25,10 +25,12 @@ describe('Game', function() {
     // const deck = new Deck([card1, card2, card3]);
     // const round = new Round(deck);
     const game = new Game();
+    game.start()
     expect(game.currentRound).to.equal('')
   });
 
   // it('should create Cards in a new Game', function() {
-  //   expect(game.start()).to.equal()
+  //   const game = new Game();
+  //   expect(game.start()).to.equal(gameCards)
   // });
 });
