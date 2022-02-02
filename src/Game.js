@@ -25,7 +25,9 @@ class Game {
     const gameCards = Object.setPrototypeOf(prototypeQuestions, Card.prototype);
     // console.log(gameCards)
     const gameDeck = new Deck(gameCards)
-    console.log(gameDeck)
+    // console.log(gameDeck)
+    const gameRound = new Round(gameDeck);
+    // console.log(gameRound)
   }
 }
 
