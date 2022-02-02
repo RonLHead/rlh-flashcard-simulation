@@ -28,6 +28,7 @@ class Game {
     // console.log(gameDeck)
     const gameRound = new Round(gameDeck);
     // console.log(gameRound)
+    this.printMessage(gameDeck, gameRound)
   }
 }
 
