@@ -24,7 +24,7 @@ class Round {
       this.incorrectGuesses.push(this.currentCard.id)
       this.deck.cards.push(this.deck.cards.shift());
       this.returnCurrentCard();
-      return 'incorrect!'
+      return newTurn.giveFeedback();
     }
   }
 
