@@ -13,15 +13,15 @@ class Turn {
   }
 
   evaluateGuess() {
-    if(this.guess === this.card.correctAnswer) {
+    if (this.guess === this.card.correctAnswer) {
       return true;
     } else return false;
   }
 
   giveFeedback() {
-    if(!this.evaluateGuess()) {
-      return 'incorrect!';
-    } else return 'correct!';
+    if (!this.evaluateGuess()) {
+      return "incorrect!";
+    } else return "correct!";
   }
 }
 
