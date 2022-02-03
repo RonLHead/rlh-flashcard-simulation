@@ -62,10 +62,6 @@ describe("Round", function () {
   });
 
   it("should evalulate a correct guess", function () {
-    const round = new Round(deck);
-    expect(round.takeTurn("sea otter")).to.equal("correct!");
-    expect(round.turns).to.equal(1);
-  });
 
   it("should evalulate an incorrect guess", function () {
     const round = new Round(deck);
