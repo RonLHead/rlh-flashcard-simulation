@@ -11,31 +11,25 @@ class Round {
     return this.currentCard;
   }
 
-  nextCard() {
-    // this.deck.cards.push(this.deck.cards.shift());
-  }
-
   takeTurn(guess) {
-    this.turns ++;
-    if(guess === this.currentCard.correctAnswer) {
-      // this.nextCard();
+    this.turns++;
+    if (guess === this.currentCard.correctAnswer) {
       this.returnCurrentCard();
-      return 'correct!';
+      return "correct!";
     } else {
-      this.incorrectGuesses.push(this.currentCard.id)
-      // this.nextCard();
+      this.incorrectGuesses.push(this.currentCard.id);
       this.returnCurrentCard();
-      return 'incorrect!'
+      return "incorrect!";
     }
   }
 
   calculatePercentCorrect() {
     let numCorrect = this.deck.cards.length - this.incorrectGuesses.length;
-    return Math.trunc((numCorrect/this.deck.cards.length) * 100);
+    return Math.trunc((numCorrect / this.deck.cards.length) * 100);
   }
 
   endRound() {
-    if(this.turns === this.deck.cards.length) {
+    if (this.turns === this.deck.cards.length) {
       return `** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`;
     }
   }
