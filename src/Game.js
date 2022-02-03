@@ -4,7 +4,6 @@ const util = require('./util');
 
 const Deck = require('./Deck');
 const Card = require('./Card');
-// const Turn = require('./Turn');
 const Round = require('./Round');
 
 class Game {
