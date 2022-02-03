@@ -22,11 +22,12 @@ class Game {
   }
 
   start() {
-    const gameCards = prototypeQuestions.map(cardDetails => {
+    const gameCards = prototypeQuestions.map(function (cardDetails) {
       return new Card(cardDetails.id, cardDetails.question, cardDetails.answers, cardDetails.correctAnswer);
     });
     const gameDeck = new Deck(gameCards)
     const gameRound = new Round(gameDeck);
+    this.currentRound = gameRound;
     this.printMessage(gameDeck, gameRound);
     this.printQuestion(gameRound)
   }
