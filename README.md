@@ -1,71 +1,59 @@
-# FlashCards Starter Kit
+Abstract at the top (A sentence or two describing the project)
+A GIF of the working application
+Technologies used
+Install/Setup instructions
 
-## Fork This Repo
+# FlashCards Simulation
+<p align="center">
+  <img width=400 height=600 src="assets/flashcard_screenshot.JPG">
+</p>
 
-On the top right corner of this page, click the **Fork** button.
+This project simulates a FlashCard game using the command line through the terminal. 
+## Contributor
+- [Ron Head](https://github.com/RonLHead)
 
-## Setup
+## Technologies Used
+- JavaScript
+- Html
+- CSS
 
-Clone down the forked repo (from your GitHub). Since you don't want to name your project "flashcards-starter", you can use an optional argument when you run `git clone` (you replace the `[...]` with the terminal command arguments):
+## [Deploy Link](https://github.com/RonLHead/rlh-tic-tac-toe)
 
-```bash
-git clone [remote-address] [what you want to name the repo]
-```
+## Instructions For Use
 
-Once you have cloned the repo, change into the directory and install the library dependencies. Run:
+- Index.html will open a new Tic-Tac-Toe game on the user's browser.
+- The new game will display an empty grid of nine boxes (arranged in three rows and three columns). A new game will default to Player One's turn first, which will display under the heading.
+- Player One goes first by clicking one of the empty boxes. Player One's token is a star symbol, which will fill the box that the user clicks.
 
-```bash
-npm install
-```
+<p align="center">
+  <img width=120 height=100 src="assets/tic-tac-toe-p1-token.jpg">
+</p>
 
-To verify that it is setup correctly, run `npm test` in your terminal. You should have 5 pending tests in your `Card` test file that show up.
+- It will be Player Two's turn next (this message will display in the subheading). Just like in the previous step, Player Two can click on any empty box, which will fill it with Player Two's token, a white square.
 
-Running `node index.js` from the root of your project should result in the following message being displayed in your terminal: 
+<p align="center">
+  <img width=120 height=100 src="assets/tic-tac-toe-p2-token.jpg">
+</p>
 
-```bash
-Your project is running...
-```
+- This back-and-forth sequence will continue until one of two outcomes occur:
+  1. A player fills three boxes in a row with their respective token in three possible directions:
+    - Horizontal
+    - Vertical
+    - Diagonal
+  2. All boxes are clicked and filled but no player has three in a row, resulting in a tie game
 
-*Note that you will not need to you run your server until you are instantiating your `Game` class in Iteration 3. Prior to that, you should be using TDD to drive your code. You should check the functionality of your application by running your tests via `npm test`.*
+1. In the case of the first outcome, the game pauses with the winning row highlighted on the game grid and the winning player displayed in the subheading. The winning player's score is incremented in their respective section of the game (Player One above the game grid and Player Two below). After roughly five seconds, the tokens are cleared and a new game ensues.
+<p align="center">
+  <img width=400 height=600 src="assets/tic-tac-toe-gameplay.gif">
+</p>
 
+2. In the case of the second outcome, the game pauses and the subheading displays a tie game. No player's score increments. After roughly five seconds, a new game ensues with the next player's turn up first.
 
-## Where to Add Your Code
+<p align="center">
+  <img width=400 height=600 src="assets/tic-tac-toe-tiegame.gif">
+</p>
+- Each player's score will continue to increment as the game continues. The scores will reset to zero once the user refreshes the browser.
 
-### JavaScript
-
-**Create all of your feature code files in the `src` directory.**
-
-We will be using the `module.exports` and `require` syntax to share code across files.
-
-## How to View Your Code in Action
-
-Once you are working through Iteration 3, you will want to start your server to test your functionality.
-In the terminal, run:
-
-```bash
-node index.js
-```
-
-When the game is functioning appropriately, you will be prompted for each question, have the opportunity to select an answer, and will be given feedback. You will be able to play through the entire deck of cards:
-
-![flash cards example gif](https://media.giphy.com/media/1zkb1q58eTiTH6D7wc/giphy.gif)
-
----
-
-## Test Files Organization
-
-Similar to feature code, your test code needs to be put in a specific place for it to run successfully.
-
-**Put all of your test files in the `test` directory.** As a convention, all test filenames should end with `-test.js`. For instance: `Round-test.js`.
-
-## Running Your Tests
-
-Run your test suite using the command:
-
-```bash
-npm test
-```
-
-The test results will output to the terminal.
-
-
+## Future Additions
+- Implement local storage to save and display the scores of previous games.
+- Allow users to select their own unique tokens from a list of tokens.
