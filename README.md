@@ -1,59 +1,44 @@
-Abstract at the top (A sentence or two describing the project)
 A GIF of the working application
 Technologies used
 Install/Setup instructions
 
 # FlashCards Simulation
 <p align="center">
-  <img width=400 height=600 src="assets/flashcard_screenshot.JPG">
+  <img src="assets/flashcard_screenshot.JPG">
 </p>
 
-This project simulates a FlashCard game using the command line through the terminal. 
+This project simulates a FlashCard game using the command line through the terminal. The game will house 30 card instantiations of Javascript-related questions pertaining to Turing's Module 2 FrontEnd curriculum. When the user runs this program, they can answer all 30 flashcard questions to test their knowledge! This particular project also contains 5 unit tests for each of the JS classes.
+
 ## Contributor
 - [Ron Head](https://github.com/RonLHead)
 
 ## Technologies Used
 - JavaScript
-- Html
-- CSS
 
-## [Deploy Link](https://github.com/RonLHead/rlh-tic-tac-toe)
+## [Deploy Link](https://github.com/RonLHead/rlh-flashcard-simulation)
+
+<p align="center">
+<img src="assets/flashcard-simulation.gif">
+</p>
 
 ## Instructions For Use
 
-- Index.html will open a new Tic-Tac-Toe game on the user's browser.
-- The new game will display an empty grid of nine boxes (arranged in three rows and three columns). A new game will default to Player One's turn first, which will display under the heading.
-- Player One goes first by clicking one of the empty boxes. Player One's token is a star symbol, which will fill the box that the user clicks.
+#### FlashCards Simulation
 
-<p align="center">
-  <img width=120 height=100 src="assets/tic-tac-toe-p1-token.jpg">
-</p>
+- To run the FlashCards simulation, the user will open index.js through the command line. Example would be node index.js.
+- The user will see the text "Your project is running..."
+  "Welcome to FlashCards! You are playing with 30 cards"
+- In order to answer a question, the user will enter 1 to 3, which correspond to the 3 possible answers.
+- After enter 1, 2, or 3, the user will click enter, which will record their answer.
+- If the user is correct, they will see the text "Your answer of ____ is correct!", then they can click enter again to go the next question.
+- If the user is incorrect, they will see the text "Your answer of ____ is incorrect!", then they can click enter again to go the next question.
+- Once all the user has gone through all the FlashCards, the program ends.
 
-- It will be Player Two's turn next (this message will display in the subheading). Just like in the previous step, Player Two can click on any empty box, which will fill it with Player Two's token, a white square.
+#### Unit Tests
 
-<p align="center">
-  <img width=120 height=100 src="assets/tic-tac-toe-p2-token.jpg">
-</p>
-
-- This back-and-forth sequence will continue until one of two outcomes occur:
-  1. A player fills three boxes in a row with their respective token in three possible directions:
-    - Horizontal
-    - Vertical
-    - Diagonal
-  2. All boxes are clicked and filled but no player has three in a row, resulting in a tie game
-
-1. In the case of the first outcome, the game pauses with the winning row highlighted on the game grid and the winning player displayed in the subheading. The winning player's score is incremented in their respective section of the game (Player One above the game grid and Player Two below). After roughly five seconds, the tokens are cleared and a new game ensues.
-<p align="center">
-  <img width=400 height=600 src="assets/tic-tac-toe-gameplay.gif">
-</p>
-
-2. In the case of the second outcome, the game pauses and the subheading displays a tie game. No player's score increments. After roughly five seconds, a new game ensues with the next player's turn up first.
-
-<p align="center">
-  <img width=400 height=600 src="assets/tic-tac-toe-tiegame.gif">
-</p>
-- Each player's score will continue to increment as the game continues. The scores will reset to zero once the user refreshes the browser.
+- This repo also includes 5 unit tests for the 5 JavaScript classes: Card, Deck, Turn, Round, and Game.
+- To open one of these tests, the user can run the test in the command line by typing npm test test/<name-of-test.js>.
+- All 5 unit tests should pass. The user can make changes to any of the corresponding JavaScript files if they wish to test or modify the program.
 
 ## Future Additions
-- Implement local storage to save and display the scores of previous games.
-- Allow users to select their own unique tokens from a list of tokens.
+- Implement an option for users to select from various decks of cards.
