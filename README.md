@@ -1,7 +1,3 @@
-A GIF of the working application
-Technologies used
-Install/Setup instructions
-
 # FlashCards Simulation
 <p align="center">
   <img src="assets/flashcard_screenshot.JPG">
